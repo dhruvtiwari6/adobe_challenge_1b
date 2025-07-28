@@ -1,0 +1,11 @@
+PyMuPDF==1.23.3
+sentence-transformers==2.2.2
+transformers==4.41.2
+torch==2.3.0
+scipy==1.13.1
+numpy==1.26.4
+regex==2023.12.25
+tqdm==4.66.4
+tokenizers==0.19.1
+requests==2.31.0
+
