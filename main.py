@@ -7,7 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1vrjHlh9ql-ROAS2ucezwmodu9FfEr6aB
 """
 
-!pip install pymupdf sentence-transformers
 
 import fitz
 def extract_pdf_content(pdf_path):
@@ -116,14 +115,13 @@ def process_documents(pdf_paths, persona, job):
     return final_output
 
 import os
-os.environ["CUDA_LAUNCH_BLOCKING"] = "1"
 persona = input("Enter the persona: ")
 job = input("Enter the job: ")
-pdf_dir = "/content/app/input"
+pdf_dir = "./input"
 pdf_paths = [os.path.join(pdf_dir, f) for f in os.listdir(pdf_dir) if f.endswith(".pdf")]
 output_json = process_documents(pdf_paths, persona, job)
 
-with open("/content/app/output/challenge1b_output.json", "w") as f:
+with open("./output/challenge1b_output.json", "w") as f:
     json.dump(output_json, f, indent=2)
 
 from pprint import pprint
